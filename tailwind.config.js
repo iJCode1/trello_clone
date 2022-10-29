@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       fontSize: {
         logo: "14px",
+      },
+      lineHeight: {
+        list: "100%",
       }
     },
   },
