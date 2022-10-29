@@ -1,5 +1,6 @@
 import List from "./list"
 import Card from "./card"
+import {todoList, inProgressList, doneList} from './data'
 
 function Board() {
   return (
