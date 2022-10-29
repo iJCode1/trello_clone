@@ -1,7 +1,7 @@
 
 function Layout({ children }) {
   return (
-    <div className="bg-violet-600">
+    <div className="flex flex-col h-screen bg-violet-600">
       {children}
     </div>
   )
