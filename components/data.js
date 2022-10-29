@@ -5,7 +5,7 @@ export const todoList = [
     user: {
       user_id: 7,
       name: "Joel",
-      avatar: "photo-3.png"
+      avatar: "/photo-3.png"
     },
     comments: [
       {
@@ -14,7 +14,7 @@ export const todoList = [
         user: {
           user_id: 1,
           name: "Leonidas",
-          avatar: "photo-1.png",
+          avatar: "/photo-1.png",
         }
       },
       {
@@ -23,7 +23,7 @@ export const todoList = [
         user: {
           user_id: 1,
           name: "Leonidas",
-          avatar: "photo-1.png",
+          avatar: "/photo-1.png",
         },
       }
     ],
@@ -34,7 +34,7 @@ export const todoList = [
     user: {
       user_id: 4,
       name: "Miguel",
-      avatar: "photo-2.png"
+      avatar: "/photo-2.png"
     },
   },
   {
@@ -43,7 +43,7 @@ export const todoList = [
     user: {
       user_id: 1,
       name: "Leonidas",
-      avatar: "photo-1.png"
+      avatar: "/photo-1.png"
     },
     comments: [
       {
@@ -52,7 +52,7 @@ export const todoList = [
         user: {
           user_id: 7,
           name: "Joel",
-          avatar: "photo-3.png",
+          avatar: "/photo-3.png",
         }
       },
     ],
@@ -66,7 +66,7 @@ export const inProgressList = [
     user: {
       user_id: 4,
       name: "Miguel",
-      avatar: "photo-2.png"
+      avatar: "/photo-2.png"
     },
   },
   {
@@ -75,7 +75,7 @@ export const inProgressList = [
     user: {
       user_id: 7,
       name: "Joel",
-      avatar: "photo-3.png"
+      avatar: "/photo-3.png"
     },
   },
 ]
@@ -87,7 +87,7 @@ export const doneList = [
     user: {
       user_id: 1,
       name: "Leonidas",
-      avatar: "photo-1.png"
+      avatar: "/photo-1.png"
     },
   },
   {
@@ -96,8 +96,19 @@ export const doneList = [
     user: {
       user_id: 1,
       name: "Leonidas",
-      avatar: "photo-1.png"
+      avatar: "/photo-1.png"
     },
+    comments: [
+      {
+        comment_id: 8672341,
+        text: "Un estudiante no puede descargar su certificado",
+        user: {
+          user_id: 7,
+          name: "Joel",
+          avatar: "/photo-3.png",
+        }
+      },
+    ]
   },
   {
     id: 8452342,
@@ -105,7 +116,7 @@ export const doneList = [
     user: {
       user_id: 7,
       name: "Joel",
-      avatar: "photo-3.png"
+      avatar: "/photo-3.png"
     },
   },
 ]
