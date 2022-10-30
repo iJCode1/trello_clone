@@ -5,7 +5,7 @@ function Header() {
     <header>
       <p className="logo">
         <Image src="/logo.png" alt="leonidasesteban.com" width="40" height="40"/>
-        <a href="https://LeonidasEsteban.com" className="uppercase text-logo hover:underline" target="_blank" rel="noreferrer">LeonidasEsteban.com</a>
+        <a href="https://LeonidasEsteban.com" className="text-white uppercase text-logo hover:underline" target="_blank" rel="noreferrer">LeonidasEsteban.com</a>
       </p>
     </header>
   )

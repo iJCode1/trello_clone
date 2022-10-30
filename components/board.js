@@ -30,7 +30,7 @@ function Board({ setModal, setDetails }) {
 
   return (
     <div className="flex flex-col flex-1 p-4 bg-white/40">
-      <div className="flex flex-wrap items-center gap-6 mb-4">
+      <div className="flex flex-wrap items-center gap-6 mb-4 text-white">
         <h1 className="text-xl font-bold sm:text-2xl">Development</h1>
         <span className="w-1 h-10 border-r-2"></span>
         <div className="flex">

@@ -69,8 +69,8 @@ function List({ title, id, children, handleDrop, listOfList, setListOfList }) {
     <div onDrop={handleDrop} onDragOver={handleDragOver} className="relative flex flex-1" data-id={id}>
       <div className="absolute inset-0 flex flex-col flex-1 gap-4 p-4 bg-indigo-300 rounded ">
         <div className="flex justify-between">
-          <h2 className="font-bold">{title}</h2>
-          <span className="leading-list">...</span>
+          <h2 className="font-bold text-white">{title}</h2>
+          <span className="text-white leading-list">•••</span>
         </div>
         <div className="flex flex-col flex-1 gap-4 overflow-auto">
           {children}
@@ -78,7 +78,6 @@ function List({ title, id, children, handleDrop, listOfList, setListOfList }) {
         {
           isAddCard
             ? <div className="flex flex-col gap-4 p-1">
-              {/* <p className="font-medium text-indigo-900">Añada otra tarjeta</p> */}
               <div className="flex flex-col gap-2">
                 <div className="flex gap-2 p-2 bg-white rounded">
                   <input onChange={handleChange} value={task} type="text" className="w-full pr-2 text-black bg-white rounded" placeholder="Introduzca un título para esta tarjeta..." />
@@ -90,7 +89,7 @@ function List({ title, id, children, handleDrop, listOfList, setListOfList }) {
               </div>
 
               <div className="flex items-center gap-4">
-                <button onClick={handleAddCard} className="p-2 transition-transform bg-indigo-500 rounded cursor-pointer active:scale-90">Añada tarjeta</button>
+                <button onClick={handleAddCard} className="p-2 text-white transition-transform bg-indigo-500 rounded cursor-pointer  active:scale-90">Añada tarjeta</button>
                 <div onClick={handleCancel} className="transition-transform cursor-pointer active:scale-90">
                   <Image src="/cancel.svg" width="20" height="20" alt="" />
                 </div>
