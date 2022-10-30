@@ -2,7 +2,6 @@ import List from "./list"
 import Card from "./card"
 import { useState } from 'react';
 import { todoList, inProgressList, doneList } from './data'
-import { data } from "autoprefixer";
 
 function Board() {
 
@@ -34,7 +33,7 @@ function Board() {
         <h1 className="text-2xl font-bold">Development</h1>
       </div>
       <main className="flex flex-1 gap-6">
-        <List title="Todo" id="todoList" handleDrop={handleDrop}>
+        <List title="Todo" id="todoList" handleDrop={handleDrop} listOfList={listOfList} setListOfList={setListOfList}>
           {
             listOfList.todoList.map(item => (
               <Card {...item} key={item.id} setDragged={setDragged} />
@@ -42,7 +41,7 @@ function Board() {
           }
         </List>
 
-        <List title="In Progress" id="inProgressList" handleDrop={handleDrop}>
+        <List title="In Progress" id="inProgressList" handleDrop={handleDrop} listOfList={listOfList} setListOfList={setListOfList}>
           {
             listOfList.inProgressList.map(item => (
               <Card {...item} key={item.id} setDragged={setDragged} />
@@ -50,7 +49,7 @@ function Board() {
           }
         </List>
 
-        <List title="Done" id="doneList" handleDrop={handleDrop}>
+        <List title="Done" id="doneList" handleDrop={handleDrop} listOfList={listOfList} setListOfList={setListOfList}>
           {
             listOfList.doneList.map(item => (
               <Card {...item} key={item.id} setDragged={setDragged} />
