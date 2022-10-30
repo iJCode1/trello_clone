@@ -3,9 +3,9 @@ import Card from "./card"
 import { useState } from 'react';
 import { todoList, inProgressList, doneList } from './data'
 
-function Board() {
+function Board({ setModal, setDetails }) {
 
-  const [dragged, setDragged] = useState(null);
+  const [dragged, setDragged] = useState(null)
   const [listOfList, setListOfList] = useState({
     todoList,
     inProgressList,
@@ -20,7 +20,7 @@ function Board() {
     const newList = listOfListClone[dragged.list].filter(item => {
       return dragged.data.id !== item.id
     })
-    
+
     listOfListClone[dragged.list] = newList
     listOfListClone[list].push(dragged.data)
 
@@ -36,7 +36,7 @@ function Board() {
         <List title="Todo" id="todoList" handleDrop={handleDrop} listOfList={listOfList} setListOfList={setListOfList}>
           {
             listOfList.todoList.map(item => (
-              <Card {...item} key={item.id} setDragged={setDragged} />
+              <Card {...item} key={item.id} setDragged={setDragged} dataItem={item.id} setModal={setModal} listOfList={listOfList} setDetails={setDetails} />
             ))
           }
         </List>
@@ -44,7 +44,7 @@ function Board() {
         <List title="In Progress" id="inProgressList" handleDrop={handleDrop} listOfList={listOfList} setListOfList={setListOfList}>
           {
             listOfList.inProgressList.map(item => (
-              <Card {...item} key={item.id} setDragged={setDragged} />
+              <Card {...item} key={item.id} setDragged={setDragged} dataItem={item.id} setModal={setModal} listOfList={listOfList} setDetails={setDetails} />
             ))
           }
         </List>
@@ -52,7 +52,7 @@ function Board() {
         <List title="Done" id="doneList" handleDrop={handleDrop} listOfList={listOfList} setListOfList={setListOfList}>
           {
             listOfList.doneList.map(item => (
-              <Card {...item} key={item.id} setDragged={setDragged} />
+              <Card {...item} key={item.id} setDragged={setDragged} dataItem={item.id} setModal={setModal} listOfList={listOfList} setDetails={setDetails} />
             ))
           }
         </List>
