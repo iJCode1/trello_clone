@@ -2,6 +2,7 @@ import List from "./list"
 import Card from "./card"
 import { useState } from 'react';
 import { todoList, inProgressList, doneList } from './data'
+import Image from "next/image";
 
 function Board({ setModal, setDetails }) {
 
@@ -29,8 +30,17 @@ function Board({ setModal, setDetails }) {
 
   return (
     <div className="flex flex-col flex-1 p-4 bg-white/40">
-      <div className="mb-4">
+      <div className="flex items-center gap-6 mb-4">
         <h1 className="text-2xl font-bold">Development</h1>
+        <span className="w-1 h-10 border-r-2"></span>
+        <div className="flex">
+          <Image className="self-center -mr-2 rounded-full" src="/photo-1.png" width="36" height="36" alt=""/>
+          <Image className="self-center -mr-2 rounded-full" src="/photo-2.png" width="36" height="36" alt=""/>
+          <Image className="self-center -mr-2 rounded-full" src="/photo-3.png" width="36" height="36" alt=""/>
+          <Image className="self-center -mr-2 rounded-full" src="/photo-4.png" width="36" height="36" alt=""/>
+        </div>
+        <span className="w-1 h-10 border-r-2"></span>
+        <button className="p-2 transition-transform bg-indigo-400 rounded cursor-pointer active:scale-90">Invitar</button>
       </div>
       <main className="flex flex-1 gap-6">
         <List title="Todo" id="todoList" handleDrop={handleDrop} listOfList={listOfList} setListOfList={setListOfList}>
